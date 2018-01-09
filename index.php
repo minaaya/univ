@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
  if (!(isset($_SESSION['username']))) {header("location: login.php ");}
    ?>
 <!DOCTYPE html>
@@ -9,23 +9,20 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
     <title>Students</title>
-
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
-    
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <script src="assets/js/chart-master/Chart.js"></script>
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -194,7 +191,7 @@
             </div>
         </header>
       <!--header end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -203,10 +200,10 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
+
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">University BBA</h5>
-              	  
+
               	  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -220,7 +217,7 @@
                           <li><a  href="">2eme master</a></li>
                       </ul>
                   </li>
-  
+
 
   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -293,7 +290,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -303,7 +300,7 @@
 
               <div class="row">
                   <div class="col-lg-9 main-chart">
-                  
+
                   	<div class="row mtbox">
                   		<!--<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
@@ -340,16 +337,16 @@
                   			</div>
 					  			<p>Your server is working perfectly. Relax & enjoy.</p>
                   		</div>-->
-                  	
-                  	</div><!-- /row mt -->	
-                  
-                      
+
+                  	</div><!-- /row mt -->
+
+
                       <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
                       	<div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
                       		<div class="white-panel pn ">
-                      			
+
                       			<div class="white-header">
 						  			<h5>Analyse</h5>
                       			</div>
@@ -367,7 +364,7 @@
                       	    	<div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
                       		<div class="white-panel pn ">
-                      			
+
                       			<div class="white-header">
 						  			<h5>Algebre</h5>
                       			</div>
@@ -379,14 +376,14 @@
 <div class="centered">
 										<img src="assets/img/product1.png" width="">
 	                      		</div>
-								
+
 	                      	</div></a><!--/grey-panel -->
                       	</div>
 
     	<div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
                       		<div class="white-panel pn donut-chart">
-                      			
+
                       			<div class="white-header">
 						  			<h5>Algorithmique</h5>
                       			</div>
@@ -416,7 +413,7 @@
     	<div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
-                      			
+
                       			<div class="white-header">
 						  			<h5>Base de donne</h5>
                       			</div>
@@ -435,7 +432,7 @@
     	<div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
-                      			
+
                       			<div class="white-header">
 						  			<h5>Resaux</h5>
                       			</div>
@@ -466,7 +463,7 @@
     	<div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
-                      			
+
                       			<div class="white-header">
 						  			<h5>FD</h5>
                       			</div>
@@ -524,9 +521,9 @@
 	                      		</div>
                       		</div>
                       	</div><!-- /col-md-4 -->
-                      	
+
 						<!--<div class="col-md-4 mb">
-							<!-- WHITE PANEL - TOP USER 
+							<!-- WHITE PANEL - TOP USER
 							<div class="white-panel pn">
 								<div class="white-header">
 									<h5>TOP USER</h5>
@@ -545,12 +542,12 @@
 								</div>
 							</div>
 						</div><!-- /col-md-4-->
-                      	
 
-                    </div>                    
-                    				
+
+                    </div>
+
 					<!--<div class="row">
-						<!-- TWITTER PANEL 
+						<!-- TWITTER PANEL
 						<div class="col-md-4 mb">
                       		<div class="darkblue-panel pn">
                       			<div class="darkblue-header">
@@ -581,10 +578,10 @@
 								</footer>
                       		</div> /darkblue panel
 						</div>  -->
-						
+
 						<!--
 						<div class="col-md-4 mb">
-							<!-- INSTAGRAM PANEL 
+							<!-- INSTAGRAM PANEL
 							<div class="instagram-panel pn">
 								<i class="fa fa-instagram fa-4x"></i>
 								<p>@THISISYOU<br/>
@@ -592,8 +589,8 @@
 								</p>
 								<p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
 							</div>
-						</div><!-- /col-md-4 
-						
+						</div><!-- /col-md-4
+
 						<div class="col-md-4 col-sm-4 mb">
 							<!-- REVENUE PANEL
 							<div class="darkblue-panel pn">
@@ -606,9 +603,9 @@
 								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
 							</div>
 						</div> /col-md-4
-						
+
 					</div> /row -->
-					
+
 					<div class="row mt">
                       <!--CUSTOM CHART START -->
                    <!--   <div class="border-head">
@@ -653,19 +650,19 @@
                           </div>
                       </div>-->
                       <!--custom chart end-->
-					</div><!-- /row -->	
-					
+					</div><!-- /row -->
+
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
-                  
-                  
+
+
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->                  
-                  
+      *********************************************************************************************************************************************************** -->
+
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
 						<h3>NOTIFICATIONS</h3>
-                                        
+
                       <!-- First Action -->
                       <div class="desc">
                       	<div class="thumb">
@@ -722,9 +719,9 @@
                       	</div>
                       </div>
 
-                       <!-- USERS ONLINE SECTION 
+                       <!-- USERS ONLINE SECTION
 						<h3>TEAM MEMBERS</h3>
-                      <!-- First Member 
+                      <!-- First Member
                       <div class="desc">
                       	<div class="thumb">
                       		<img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
@@ -735,7 +732,7 @@
                       		</p>
                       	</div>
                       </div>
-                      <!-- Second Member 
+                      <!-- Second Member
                       <div class="desc">
                       	<div class="thumb">
                       		<img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
@@ -746,7 +743,7 @@
                       		</p>
                       	</div>
                       </div>
-                      <!-- Third Member 
+                      <!-- Third Member
                       <div class="desc">
                       	<div class="thumb">
                       		<img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
@@ -768,7 +765,7 @@
                       		</p>
                       	</div>
                       </div>
-                      <!-- Fifth Member 
+                      <!-- Fifth Member
                       <div class="desc">
                       	<div class="thumb">
                       		<img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
@@ -793,7 +790,7 @@
                                 </div>
                             </div>
                         </div>< / calendar -->
-                      
+
                   </div><!-- /col-lg-3 -->
               </div><!--/row -->
           </section>
@@ -824,14 +821,14 @@
 
     <!--common script for all pages-->
     <script src="assets/js/common-scripts.js"></script>
-    
+
     <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
-	<script src="assets/js/zabuto_calendar.js"></script>	
-	
+    <script src="assets/js/sparkline-chart.js"></script>
+	<script src="assets/js/zabuto_calendar.js"></script>
+
 	<!--<script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
@@ -860,7 +857,7 @@
             $("#date-popover").click(function (e) {
                 $(this).hide();
             });
-        
+
             $("#my-calendar").zabuto_calendar({
                 action: function () {
                     return myDateFunction(this.id, false);
@@ -878,8 +875,8 @@
                 ]
             });
         });
-        
-        
+
+
         function myNavFunction(id) {
             $("#date-popover").hide();
             var nav = $("#" + id).data("navigation");
@@ -887,7 +884,7 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
-  
+
 
   </body>
 </html>
