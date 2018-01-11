@@ -20,18 +20,14 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-
     <script src="assets/js/chart-master/Chart.js"></script>
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body>
-
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
@@ -344,11 +340,19 @@
                       <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
                       	<div class="col-md-4 col-sm-4 mb">
-                      		<a href="detail.php">
+                        <?php
+                        $connect = mysqli_connect('localhost','root','','univ');
+                          //affichege des modules
+                          $sql="SELECT * FROM module LIMIT 3";//id_module
+                          $res=mysqli_query($connect,$sql);
+                          while ($row=mysqli_fetch_array($res)) {
+                            ?>
+                          <a href="detail.php">
                       		<div class="white-panel pn ">
 
                       			<div class="white-header">
-						  			<h5>Analyse</h5>
+						  			<h5><?php echo $row['Titre_Module'];
+                 ?></h5>
                       			</div>
 								<div class="row">
 									<div class="col-sm-10 col-xs-10 ">
@@ -359,9 +363,9 @@
 								<div class="centered">
 										<img src="assets/img/product2.png" width="">
 	                      		</div>
-	                      	</div></a><!--/grey-panel -->
+	                      	</div></a> <?php } ?> <!--/grey-panel -->
                       	</div><!-- /col-md-4-->
-                      	    	<div class="col-md-4 col-sm-4 mb">
+                <div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
                       		<div class="white-panel pn ">
 
@@ -370,10 +374,10 @@
                       			</div>
 								<div class="row">
 									<div class="col-sm-10 col-xs-10 ">
-										<p><i class=""></i> Test De Cours algebre </p>
+										<p><i class=""></i> Algebre </p>
 									</div>
 	                      		</div>
-<div class="centered">
+                   <div class="centered">
 										<img src="assets/img/product1.png" width="">
 	                      		</div>
 
