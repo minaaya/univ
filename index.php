@@ -335,40 +335,36 @@
                   		</div>-->
 
                   	</div><!-- /row mt -->
-
-
-                      <div class="row mt">
+                    <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
-                      	<div class="col-md-4 col-sm-4 mb">
+                      	<div class="col-md-4 col-sm-4 mb" width="800">
                         <?php
                         $connect = mysqli_connect('localhost','root','','univ');
                           //affichege des modules
-                          $sql="SELECT * FROM module LIMIT 3";//id_module
+                          $sql="SELECT * FROM module ";
                           $res=mysqli_query($connect,$sql);
                           while ($row=mysqli_fetch_array($res)) {
                             ?>
-                          <a href="detail.php">
+                        <?php echo"<a href='detail.php?id=$row[0]' >";?>
                       		<div class="white-panel pn ">
 
                       			<div class="white-header">
-						  			<h5><?php echo $row['Titre_Module'];
-                 ?></h5>
+						  			      <h5><?php echo $row['Titre_Module']; echo $row[0];?></h5>
                       			</div>
-								<div class="row">
-									<div class="col-sm-10 col-xs-10 ">
+								<div class="">
+									<div class="col-sm-10 col-xs-10 " >
 										<p><i class=""></i> Test De Cours d'Analyse </p>
 									</div>
-	                      		</div>
+	           		</div>
 
 								<div class="centered">
-										<img src="assets/img/product2.png" width="">
+										<img src="assets/img/product2.png" width="200">
 	                      		</div>
-	                      	</div></a> <?php } ?> <!--/grey-panel -->
-                      	</div><!-- /col-md-4-->
-                <div class="col-md-4 col-sm-4 mb">
+	                      	</div><?php  echo"</a>";?></div> <?php } ?> <!--/grey-panel -->
+                      	<!-- /col-md-4-->
+                <!--div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
                       		<div class="white-panel pn ">
-
                       			<div class="white-header">
 						  			<h5>Algebre</h5>
                       			</div>
@@ -380,14 +376,11 @@
                    <div class="centered">
 										<img src="assets/img/product1.png" width="">
 	                      		</div>
-
 	                      	</div></a><!--/grey-panel -->
                       	</div>
-
-    	<div class="col-md-4 col-sm-4 mb">
+    	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>Algorithmique</h5>
                       			</div>
@@ -396,7 +389,6 @@
 										<p><i class=""></i> Test De Cours Algorithmique </p>
 									</div>
 	                      		</div>
-
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 								<!--<script>
 									var doughnutData = [
@@ -413,11 +405,9 @@
 								</script>-->
 	                      	</div></a><!--/grey-panel -->
                       	</div>
-
-    	<div class="col-md-4 col-sm-4 mb">
+    	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>Base de donne</h5>
                       			</div>
@@ -426,17 +416,14 @@
 										<p><i class=""></i> Test De Cours Base de donne </p>
 									</div>
 	                      		</div>
-
 								<div class="centered">
 										<img src="assets/img/product3.png" width="">
 	                      		</div>
 	                      	</div></a><!--/grey-panel -->
                       	</div>
-
-    	<div class="col-md-4 col-sm-4 mb">
+    	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>Resaux</h5>
                       			</div>
@@ -464,7 +451,7 @@
                       	</div>
 
 
-    	<div class="col-md-4 col-sm-4 mb">
+    	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
 
@@ -493,21 +480,6 @@
 								</script>-->
 	                      	</div></a><!--/grey-panel -->
                       	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                       	<!--<div class="col-md-4 col-sm-4 mb">
                       		<div class="white-panel pn">
