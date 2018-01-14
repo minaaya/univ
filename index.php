@@ -1,6 +1,4 @@
-<?php session_start();
- if (!(isset($_SESSION['username']))) {header("location: login.php ");}
-   ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -337,30 +335,39 @@
                   	</div><!-- /row mt -->
                     <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
-                      	<div class="col-md-4 col-sm-4 mb" width="800">
-                        <?php
-                        $connect = mysqli_connect('localhost','root','','univ');
+                      	 <?php
+                        $connect = mysqli_connect('localhost','root','root','univ');
                           //affichege des modules
-                          $sql="SELECT * FROM module ";
+                          $sql="SELECT * FROM user ";
                           $res=mysqli_query($connect,$sql);
                           while ($row=mysqli_fetch_array($res)) {
                             ?>
-                        <?php echo"<a href='detail.php?id=$row[0]' >";?>
+                          <div class="col-md-4 col-sm-4 mb" width="800">
+                        
+                        
                       		<div class="white-panel pn ">
 
                       			<div class="white-header">
 						  			      <h5><?php echo $row['Titre_Module']; echo $row[0];?></h5>
                       			</div>
-								<div class="">
+								<div class="row">
 									<div class="col-sm-10 col-xs-10 " >
 										<p><i class=""></i> Test De Cours d'Analyse </p>
 									</div>
-	           		</div>
+	           					</div>
 
 								<div class="centered">
 										<img src="assets/img/product2.png" width="200">
 	                      		</div>
-	                      	</div><?php  echo"</a>";?></div> <?php } ?> <!--/grey-panel -->
+	                      
+	                      </div>
+						</div>
+	                     <?php } ?> 
+	        </div>
+	                 		<!--/grey-panel -->
+
+
+
                       	<!-- /col-md-4-->
                 <!--div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
@@ -376,7 +383,7 @@
                    <div class="centered">
 										<img src="assets/img/product1.png" width="">
 	                      		</div>
-	                      	</div></a><!--/grey-panel -->
+	                      	</div></a><!--/grey-panel 
                       	</div>
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
@@ -402,8 +409,8 @@
 											}
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>-->
-	                      	</div></a><!--/grey-panel -->
+								</script>
+	                      	</div></a><!--/grey-panel 
                       	</div>
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
@@ -419,7 +426,7 @@
 								<div class="centered">
 										<img src="assets/img/product3.png" width="">
 	                      		</div>
-	                      	</div></a><!--/grey-panel -->
+	                      	</div></a><!--/grey-panel
                       	</div>
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
@@ -446,8 +453,8 @@
 											}
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>-->
-	                      	</div></a><!--/grey-panel -->
+								</script>
+	                      	</div></a><!--/grey-panel 
                       	</div>
 
 
@@ -477,8 +484,8 @@
 											}
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>-->
-	                      	</div></a><!--/grey-panel -->
+								</script>
+	                      	</div></a><!--/grey-panel
                       	</div>
 
                       	<!--<div class="col-md-4 col-sm-4 mb">
@@ -517,7 +524,7 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /col-md-4-->
+						</div><!-- /col-md-4
 
 
                     </div>
