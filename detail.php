@@ -6,9 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
     <title>Students</title>
-
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
@@ -16,22 +14,17 @@
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
-
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-
     <script src="assets/js/chart-master/Chart.js"></script>
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body>
-
   <section id="container" >
       <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
@@ -200,10 +193,8 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">University BBA</h5>
-
               	  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -217,8 +208,6 @@
                           <li><a  href="">2eme master</a></li>
                       </ul>
                   </li>
-
-
   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -232,7 +221,6 @@
                           <li><a  href="">2eme master</a></li>
                       </ul>
                   </li>
-
                   <!--<li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
@@ -297,10 +285,8 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
               <div class="row">
                   <div class="col-lg-9 main-chart">
-
                   	<div class="row mtbox">
                   		<!--<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
@@ -319,8 +305,7 @@
                   		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
 					  			<span class="li_stack"></span>
-					  			<h3>23</h3>
-                  			</div>
+					  			<h3>23</h3></div>
 					  			<p>You have 23 unread messages in your inbox.</p>
                   		</div>
                   		<div class="col-md-2 col-sm-2 box0">
@@ -337,17 +322,38 @@
                   			</div>
 					  			<p>Your server is working perfectly. Relax & enjoy.</p>
                   		</div>-->
-
                   	</div><!-- /row mt -->
-
-
                       <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
                       	<!-- /col-md-4-->
+                        <?php
+                        if (!(isset($_GET['id']))) {
+                         $connect = mysqli_connect('localhost','root','','univ');
+                         //affichege des modules
+                         $sql="SELECT * FROM module ";
+                         $res=mysqli_query($connect,$sql);
+                         while ($row=mysqli_fetch_array($res)) {
+                           ?>
+                         <?php echo"<a href='detail.php?id=$row[0]' >";?>
+                         <div class="col-md-4 col-sm-4 mb" width="800">
+                         <div class="white-panel pn ">
+                         <div class="white-header">
+                         <h5><?php echo $row['Titre_Module']; ?></h5>
+                           </div>
+               <div class="row">
+                 <div class="col-sm-10 col-xs-10 " >
+                   <p><i class=""></i> <?php echo $row['Description_Module']; ?> </p>
+                 </div>
+                     </div>
+               <div class="centered">
+                   <img src="assets/img/product2.png" width="200">
+                           </div>
+                       </div>
+           </div><?php  echo"</a>";?>
+                      <?php }  } ?>
                       	    	<div class="col-md-4 col-sm-4 mb">
                       		<a href="gallery.php">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>TD</h5>
                       			</div>
@@ -356,7 +362,6 @@
 										<p><i class=""></i> Test De TD Analyse </p>
 									</div>
 	                      		</div>
-
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 								<!--<script>
 									var doughnutData = [
@@ -373,11 +378,9 @@
 								</script>-->
 	                      	</div></a><!--/grey-panel -->
                       	</div>
-
-    	<div class="col-md-4 col-sm-4 mb">
+    	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="gallery.php">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>TP</h5>
                       			</div>
@@ -386,7 +389,6 @@
 										<p><i class=""></i> Test De TP Analyse </p>
 									</div>
 	                      		</div>
-
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 								<!--<script>
 									var doughnutData = [
@@ -400,14 +402,12 @@
 											}
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>-->
-	                      	</div></a><!--/grey-panel -->
+								</script>>
+	                      	</div></a><!--/grey-panel
                       	</div>
-
     	<div class="col-md-4 col-sm-4 mb">
                       		<a href="gallery.php">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>Cours</h5>
                       			</div>
@@ -416,7 +416,6 @@
 										<p><i class=""></i> Test De Cours Analyse</p>
 									</div>
 	                      		</div>
-
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 								<!--<script>
 									var doughnutData = [
@@ -430,18 +429,10 @@
 											}
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>-->
-	                      	</div></a><!--/grey-panel -->
+								</script>>
+	                      	</div></a><!--/grey-panel --
                       	</div>
-
-
-
-
-
-
-
-
-                      	<!--<div class="col-md-4 col-sm-4 mb">
+                    	<!--<div class="col-md-4 col-sm-4 mb">
                       		<div class="white-panel pn">
                       			<div class="white-header">
 						  			<h5>TOP PRODUCT</h5>
@@ -457,7 +448,6 @@
 	                      		</div>
                       		</div>
                       	</div><!-- /col-md-4 -->
-
 						<!--<div class="col-md-4 mb">
 							<!-- WHITE PANEL - TOP USER
 							<div class="white-panel pn">
@@ -478,10 +468,7 @@
 								</div>
 							</div>
 						</div><!-- /col-md-4-->
-
-
-                    </div>
-
+                  </div>
 					<!--<div class="row">
 						<!-- TWITTER PANEL
 						<div class="col-md-4 mb">
@@ -539,9 +526,7 @@
 								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
 							</div>
 						</div> /col-md-4
-
 					</div> /row -->
-
 					<div class="row mt">
                       <!--CUSTOM CHART START -->
                    <!--   <div class="border-head">
@@ -587,18 +572,13 @@
                       </div>-->
                       <!--custom chart end-->
 					</div><!-- /row -->
-
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
-
-
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
-
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
 						<h3>NOTIFICATIONS</h3>
-
                       <!-- First Action -->
                       <div class="desc">
                       	<div class="thumb">
@@ -654,7 +634,6 @@
                       		</p>
                       	</div>
                       </div>
-
                        <!-- USERS ONLINE SECTION
 						<h3>TEAM MEMBERS</h3>
                       <!-- First Member
@@ -712,7 +691,6 @@
                       		</p>
                       	</div>
                       </div>
-
                          CALENDAR
                         <div id="calendar" class="mb">
                             <div class="panel green-panel no-margin">
@@ -726,12 +704,10 @@
                                 </div>
                             </div>
                         </div>< / calendar -->
-
                   </div><!-- /col-lg-3 -->
               </div><!--/row -->
           </section>
       </section>
-
       <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">
@@ -744,7 +720,6 @@
       </footer>
       <!--footer end-->
   </section>
-
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-1.8.3.min.js"></script>
@@ -753,19 +728,14 @@
     <script src="assets/js/jquery.scrollTo.min.js"></script>
     <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="assets/js/jquery.sparkline.js"></script>
-
-
     <!--common script for all pages-->
     <script src="assets/js/common-scripts.js"></script>
-
     <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
     <!--script for this page-->
     <script src="assets/js/sparkline-chart.js"></script>
-	<script src="assets/js/zabuto_calendar.js"></script>
-
-	<script type="text/javascript">
+  	<script src="assets/js/zabuto_calendar.js"></script>
+	  <script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
@@ -781,11 +751,9 @@
             // (string | optional) the class name you want to apply to that specific message
             class_name: 'my-sticky-class'
         });
-
         return false;
         });
 	</script>
-
 	<script type="application/javascript">
         $(document).ready(function () {
             $("#date-popover").popover({html: true, trigger: "manual"});
@@ -793,7 +761,6 @@
             $("#date-popover").click(function (e) {
                 $(this).hide();
             });
-
             $("#my-calendar").zabuto_calendar({
                 action: function () {
                     return myDateFunction(this.id, false);
@@ -811,8 +778,6 @@
                 ]
             });
         });
-
-
         function myNavFunction(id) {
             $("#date-popover").hide();
             var nav = $("#" + id).data("navigation");
@@ -820,7 +785,5 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
-
-
   </body>
 </html>

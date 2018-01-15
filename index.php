@@ -195,7 +195,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href=""><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">University BBA</h5>
 
               	  <li class="sub-menu">
@@ -331,39 +331,11 @@
                   			</div>
 					  			<p>Your server is working perfectly. Relax & enjoy.</p>
                   		</div>-->
-
                   	</div><!-- /row mt -->
                     <div class="row mt">
                       <!-- SERVER STATUS PANELS -->
-                      	 <?php
-                        $connect = mysqli_connect('localhost','root','root','univ');
-                          //affichege des modules
-                          $sql="SELECT * FROM user ";
-                          $res=mysqli_query($connect,$sql);
-                          while ($row=mysqli_fetch_array($res)) {
-                            ?>
-                          <div class="col-md-4 col-sm-4 mb" width="800">
-                        
-                        
-                      		<div class="white-panel pn ">
 
-                      			<div class="white-header">
-						  			      <h5><?php echo $row['Titre_Module']; echo $row[0];?></h5>
-                      			</div>
-								<div class="row">
-									<div class="col-sm-10 col-xs-10 " >
-										<p><i class=""></i> Test De Cours d'Analyse </p>
-									</div>
-	           					</div>
-
-								<div class="centered">
-										<img src="assets/img/product2.png" width="200">
-	                      		</div>
-	                      
-	                      </div>
-						</div>
-	                     <?php } ?> 
-	        </div>
+	                        </div>
 	                 		<!--/grey-panel -->
 
 
@@ -383,7 +355,7 @@
                    <div class="centered">
 										<img src="assets/img/product1.png" width="">
 	                      		</div>
-	                      	</div></a><!--/grey-panel 
+	                      	</div></a><!--/grey-panel
                       	</div>
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
@@ -410,7 +382,7 @@
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
 								</script>
-	                      	</div></a><!--/grey-panel 
+	                      	</div></a><!--/grey-panel
                       	</div>
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
@@ -454,7 +426,7 @@
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
 								</script>
-	                      	</div></a><!--/grey-panel 
+	                      	</div></a><!--/grey-panel
                       	</div>
 
 
