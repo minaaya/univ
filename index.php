@@ -1,4 +1,5 @@
-
+<?php session_start();
+ if (!(isset($_SESSION['username']))) {header("location: login.php ");}?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -185,7 +186,6 @@
             </div>
         </header>
       <!--header end-->
-
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -202,12 +202,12 @@
                           <span>Math</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="">1ere</a></li>
+                          <li><a  href="detail.php">1ere</a></li>
                           <li><a  href="">2eme</a></li>
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
                           <li><a  href="">2eme master</a></li>
-                      </ul>
+                      </ul>s
                   </li>
            <li class="sub-menu">
                       <a href="javascript:;" >

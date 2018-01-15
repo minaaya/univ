@@ -346,8 +346,8 @@
                    <img src="assets/img/product2.png" width="200">
                            </div>
                        </div>
-           </div><?php  echo"</a>";?></div>
-              <?php }  }  else { $i=$_GET['id'];
+           </div><?php  echo"</a>";?>
+         <?php }  }  else { $i=$_GET['id']; //echo "</div>";
                   $sql="SELECT * FROM doc WHERE  ID_Module ='$i'";
                    $res=mysqli_query($connect,$sql);
                      while ($row=mysqli_fetch_array($res)) {
@@ -365,8 +365,8 @@
                 </div></div>
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 									</div><?php  echo"</a>";?>
-                <?php }  }?></a><!--/grey-panel -->
-              </div>
+                <?php }  }?><!--/grey-panel -->
+              </div> </div>
 
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="gallery.php">
@@ -561,7 +561,7 @@
                           </div>
                       </div>-->
                       <!--custom chart end--
-					</div><!-- /row -->
+					</div><!-- /row ->
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
