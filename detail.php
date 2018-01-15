@@ -324,60 +324,50 @@
                   		</div>-->
                   	</div><!-- /row mt -->
                       <div class="row mt">
-                      <!-- SERVER STATUS PANELS -->
-                      	<!-- /col-md-4-->
-                        <?php
+                      <!-- SERVER STATUS PANELS --> <!-- /col-md-4-->
+                        <?php   $connect = mysqli_connect('localhost','root','','univ');
                         if (!(isset($_GET['id']))) {
-                         $connect = mysqli_connect('localhost','root','','univ');
                          //affichege des modules
                          $sql="SELECT * FROM module ";
                          $res=mysqli_query($connect,$sql);
                          while ($row=mysqli_fetch_array($res)) {
-                           ?>
-                         <?php echo"<a href='detail.php?id=$row[0]' >";?>
+                         echo"<a href='detail.php?id=$row[0]' >";?>
                          <div class="col-md-4 col-sm-4 mb" width="800">
                          <div class="white-panel pn ">
                          <div class="white-header">
                          <h5><?php echo $row['Titre_Module']; ?></h5>
-                           </div>
-               <div class="row">
-                 <div class="col-sm-10 col-xs-10 " >
-                   <p><i class=""></i> <?php echo $row['Description_Module']; ?> </p>
-                 </div>
+                         </div>
+                    <div class="row">
+                    <div class="col-sm-10 col-xs-10 " >
+                    <p><i class=""></i> <?php echo $row['Description_Module']; ?> </p>
+                     </div>
                      </div>
                <div class="centered">
                    <img src="assets/img/product2.png" width="200">
                            </div>
                        </div>
-           </div><?php  echo"</a>";?>
-                      <?php }  } ?>
-                      	    	<div class="col-md-4 col-sm-4 mb">
-                      		<a href="gallery.php">
+           </div><?php  echo"</a>";?></div>
+              <?php }  }  else { $i=$_GET['id'];
+                  $sql="SELECT * FROM doc WHERE  ID_Module ='$i'";
+                   $res=mysqli_query($connect,$sql);
+                     while ($row=mysqli_fetch_array($res)) {
+                        echo"<a href='gallery.php?id=$row[0]' >";?>
+                      	  <div class="col-md-4 col-sm-4 mb">
+                      		<!--a href="gallery.php"-->
                       		<div class="white-panel pn donut-chart">
                       			<div class="white-header">
-						  			<h5>TD</h5>
+						  			<h5><?php echo $row['Type_Doc']; ?></h5>
                       			</div>
 								<div class="row">
 									<div class="col-sm-6 col-xs-6 goleft">
 										<p><i class=""></i> Test De TD Analyse </p>
 									</div>
-	                      		</div>
+                </div></div>
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
-								<!--<script>
-									var doughnutData = [
-											{
-												value: 70,
-												color:"#68dff0"
-											},
-											{
-												value : 30,
-												color : "#fdfdfd"
-											}
-										];
-										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>-->
-	                      	</div></a><!--/grey-panel -->
-                      	</div>
+									</div><?php  echo"</a>";?>
+                <?php }  }?></a><!--/grey-panel -->
+              </div>
+
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="gallery.php">
                       		<div class="white-panel pn donut-chart">
@@ -467,7 +457,7 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /col-md-4-->
+						</div><!-- /col-md-4--
                   </div>
 					<!--<div class="row">
 						<!-- TWITTER PANEL
@@ -526,7 +516,7 @@
 								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
 							</div>
 						</div> /col-md-4
-					</div> /row -->
+					</div> /row --
 					<div class="row mt">
                       <!--CUSTOM CHART START -->
                    <!--   <div class="border-head">
@@ -570,7 +560,7 @@
                               <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
                           </div>
                       </div>-->
-                      <!--custom chart end-->
+                      <!--custom chart end--
 					</div><!-- /row -->
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
       <!-- **********************************************************************************************************************************************************

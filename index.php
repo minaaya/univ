@@ -194,10 +194,8 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-
               	  <p class="centered"><a href=""><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">University BBA</h5>
-
               	  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -211,9 +209,7 @@
                           <li><a  href="">2eme master</a></li>
                       </ul>
                   </li>
-
-
-  <li class="sub-menu">
+           <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>Informatique</span>
@@ -226,7 +222,6 @@
                           <li><a  href="">2eme master</a></li>
                       </ul>
                   </li>
-
                   <!--<li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
@@ -284,17 +279,14 @@
           </div>
       </aside>
       <!--sidebar end-->
-
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
               <div class="row">
                   <div class="col-lg-9 main-chart">
-
                   	<div class="row mtbox">
                   		<!--<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
@@ -333,13 +325,9 @@
                   		</div>-->
                   	</div><!-- /row mt -->
                     <div class="row mt">
-                      <!-- SERVER STATUS PANELS -->
-
+                    <!-- SERVER STATUS PANELS -->
 	                        </div>
 	                 		<!--/grey-panel -->
-
-
-
                       	<!-- /col-md-4-->
                 <!--div class="col-md-4 col-sm-4 mb">
                       		<a href="detail.php">
@@ -411,7 +399,6 @@
 										<p><i class=""></i> Test De Cours Resaux  </p>
 									</div>
 	                      		</div>
-
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 								<!--<script>
 									var doughnutData = [
@@ -428,12 +415,9 @@
 								</script>
 	                      	</div></a><!--/grey-panel
                       	</div>
-
-
     	<!--div class="col-md-4 col-sm-4 mb">
                       		<a href="">
                       		<div class="white-panel pn donut-chart">
-
                       			<div class="white-header">
 						  			<h5>FD</h5>
                       			</div>
@@ -442,7 +426,6 @@
 										<p><i class=""></i> Test De Cours de FD </p>
 									</div>
 	                      		</div>
-
 								<canvas id="serverstatus01" height="120" width="120"></canvas>
 								<!--<script>
 									var doughnutData = [
@@ -459,7 +442,6 @@
 								</script>
 	                      	</div></a><!--/grey-panel
                       	</div>
-
                       	<!--<div class="col-md-4 col-sm-4 mb">
                       		<div class="white-panel pn">
                       			<div class="white-header">
@@ -476,7 +458,6 @@
 	                      		</div>
                       		</div>
                       	</div><!-- /col-md-4 -->
-
 						<!--<div class="col-md-4 mb">
 							<!-- WHITE PANEL - TOP USER
 							<div class="white-panel pn">
@@ -497,10 +478,7 @@
 								</div>
 							</div>
 						</div><!-- /col-md-4
-
-
                     </div>
-
 					<!--<div class="row">
 						<!-- TWITTER PANEL
 						<div class="col-md-4 mb">
@@ -533,11 +511,10 @@
 								</footer>
                       		</div> /darkblue panel
 						</div>  -->
-
 						<!--
 						<div class="col-md-4 mb">
 							<!-- INSTAGRAM PANEL
-							<div class="instagram-panel pn">
+					<div class="instagram-panel pn">
 								<i class="fa fa-instagram fa-4x"></i>
 								<p>@THISISYOU<br/>
 									5 min. ago
@@ -545,7 +522,6 @@
 								<p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
 							</div>
 						</div><!-- /col-md-4
-
 						<div class="col-md-4 col-sm-4 mb">
 							<!-- REVENUE PANEL
 							<div class="darkblue-panel pn">
@@ -558,9 +534,7 @@
 								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
 							</div>
 						</div> /col-md-4
-
 					</div> /row -->
-
 					<div class="row mt">
                       <!--CUSTOM CHART START -->
                    <!--   <div class="border-head">
@@ -606,14 +580,10 @@
                       </div>-->
                       <!--custom chart end-->
 					</div><!-- /row -->
-
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
-
-
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
-
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
 						<h3>NOTIFICATIONS</h3>
