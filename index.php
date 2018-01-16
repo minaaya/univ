@@ -207,7 +207,7 @@
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
                           <li><a  href="">2eme master</a></li>
-                      </ul>s
+                      </ul>
                   </li>
            <li class="sub-menu">
                       <a href="javascript:;" >
