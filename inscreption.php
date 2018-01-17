@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect=mysqli_connect('localhost','root','root','univ');
+ require_once('connexion_bd.php');
 $test=false;
 if(isset($_POST['submit'])){
 	$nom=$_POST['nom'];

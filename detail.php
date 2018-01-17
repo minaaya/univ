@@ -1,3 +1,4 @@
+<?php  require_once('connexion_bd.php');  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -325,10 +326,11 @@
                   	</div><!-- /row mt -->
                       <div class="row mt">
                       <!-- SERVER STATUS PANELS --> <!-- /col-md-4-->
-                        <?php   $connect = mysqli_connect('localhost','root','','univ');
+                        <?php
                         if (!(isset($_GET['id']))) {
                          //affichege des modules
-                         $sql="SELECT * FROM module ";
+                         $fil=$_GET['p'];
+                         $sql="SELECT * FROM module WHERE ID_Filiere ='$fil' ";
                          $res=mysqli_query($connect,$sql);
                          while ($row=mysqli_fetch_array($res)) {
                          echo"<a href='detail.php?id=$row[0]' >";?>

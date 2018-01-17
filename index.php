@@ -1,4 +1,5 @@
 <?php session_start();
+require_once('connexion_bd.php');
  if (!(isset($_SESSION['username']))) {header("location: login.php ");}?>
 <!DOCTYPE html>
 <html lang="en">
@@ -202,8 +203,8 @@
                           <span>Math</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="detail.php">1ere</a></li>
-                          <li><a  href="">2eme</a></li>
+                          <li><?php echo"<a href='detail.php?p=F01' >";?>1ere <?php echo "</a>";?></li>
+                          <li><?php echo"<a href='detail.php?p=' >";?>2eme<?php echo "</a>";?></li>
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
                           <li><a  href="">2eme master</a></li>
@@ -326,6 +327,28 @@
                   	</div><!-- /row mt -->
                     <div class="row mt">
                     <!-- SERVER STATUS PANELS -->
+                    <?php
+                     //affichege des modules
+                     $sql="SELECT * FROM module ORDER BY freq LIMIT 6  ";
+                     $res=mysqli_query($connect,$sql);
+                     while ($row=mysqli_fetch_array($res)) {
+                     echo"<a href='detail.php?id=$row[0]' >";?>
+                     <div class="col-md-4 col-sm-4 mb" width="800">
+                     <div class="white-panel pn ">
+                     <div class="white-header">
+                     <h5><?php echo $row['Titre_Module']; ?></h5>
+                     </div>
+                <div class="row">
+                <div class="col-sm-10 col-xs-10 " >
+                <p><i class=""></i> <?php echo $row['Description_Module']; ?> </p>
+                 </div>
+                 </div>
+                  <div class="centered">
+                    <img src="assets/img/product2.png" width="200">
+                       </div>
+                   </div>
+                         </div><?php  echo"</a>";?>
+                               <?php } ?>
 	                        </div>
 	                 		<!--/grey-panel -->
                       	<!-- /col-md-4-->

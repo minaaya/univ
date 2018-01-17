@@ -1,7 +1,8 @@
 <?php
 //le scripte de la connexion de l'utilisateur
  session_start();
-$connect = mysqli_connect('localhost','root','','univ');// connexion a la base de donnée
+ require_once('connexion_bd.php');
+// connexion a la base de donnée
 $username=$_POST['log'];//obtenir le usrname et password écris les champs nommé log & pwd
 $password=$_POST['pwd'];
 $sql="SELECT * FROM user WHERE username='$username' AND mot_passe='$password'";//le requette de vérifiction si le usernamme et password existe
