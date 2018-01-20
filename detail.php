@@ -196,13 +196,16 @@
               <ul class="sidebar-menu" id="nav-accordion">
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">University BBA</h5>
+                  <li class="sub-menu">
+                      <?php echo"<a   href='detail.php?A=L1' >";?>
+                    <i class="fa fa-desktop"></i>
+                    <span>Math & Info</span> <?php echo "</a>";?></li>
               	  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>Math</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="">1ere</a></li>
                           <li><a  href="">2eme</a></li>
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
@@ -215,7 +218,6 @@
                           <span>Informatique</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="">1ere</a></li>
                           <li><a  href="">2eme</a></li>
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
@@ -327,13 +329,34 @@
                       <div class="row mt">
                       <!-- SERVER STATUS PANELS --> <!-- /col-md-4-->
                         <?php
-                        if (!(isset($_GET['id']))) {
+                        if (isset($_GET['A'])) {
+                          $annee=$_GET['A'];
+                          $sql="SELECT * FROM filiere WHERE annee ='$annee' ";
+                          $res=mysqli_query($connect,$sql);
+                          while ($row=mysqli_fetch_array($res)) {
+                          echo"<a href='detail.php?F=$row[0]' >";?>
+                          <div class="col-md-4 col-sm-4 mb" width="800">
+                          <div class="white-panel pn ">
+                          <div class="white-header">
+                          <h5><?php echo $row['Titre_Filiere']; ?></h5>
+                          </div>
+                     <div class="row">
+                     <div class="col-sm-10 col-xs-10 " >
+                     <p><i class=""></i> <?php echo $row['Specialite']; ?> </p>
+                      </div>
+                      </div>
+                 <div class="centered">
+                        </div>
+                        </div>
+                     </div><?php  echo"</a>";?>
+                     <?php }}
+                        if (isset($_GET['F'])) {
                          //affichege des modules
-                         $fil=$_GET['p'];
+                         $fil=$_GET['F'];
                          $sql="SELECT * FROM module WHERE ID_Filiere ='$fil' ";
                          $res=mysqli_query($connect,$sql);
                          while ($row=mysqli_fetch_array($res)) {
-                         echo"<a href='detail.php?id=$row[0]' >";?>
+                         echo"<a href='detail.php?M=$row[0]' >";?>
                          <div class="col-md-4 col-sm-4 mb" width="800">
                          <div class="white-panel pn ">
                          <div class="white-header">
@@ -349,11 +372,13 @@
                            </div>
                        </div>
            </div><?php  echo"</a>";?>
-         <?php }  }  else { $i=$_GET['id']; //echo "</div>";
+         <?php }}
+         if (isset($_GET['M'])) {
+                   $i=$_GET['M']; //echo "</div>";
                   $sql="SELECT * FROM doc WHERE  ID_Module ='$i'";
                    $res=mysqli_query($connect,$sql);
                      while ($row=mysqli_fetch_array($res)) {
-                        echo"<a href='gallery.php?id=$row[0]' >";?>
+                        echo"<a href='gallery.php?M=$row[0]' >";?>
                       	  <div class="col-md-4 col-sm-4 mb">
                       		<!--a href="gallery.php"-->
                       		<div class="white-panel pn donut-chart">

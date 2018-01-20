@@ -197,14 +197,17 @@ require_once('connexion_bd.php');
               <ul class="sidebar-menu" id="nav-accordion">
               	  <p class="centered"><a href=""><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">University BBA</h5>
-              	  <li class="sub-menu">
+                  <li class="sub-menu">
+                      <?php echo"<a   href='detail.php?A=L1' >";?>
+                    <i class="fa fa-desktop"></i>
+                    <span>Math & Info</span> <?php echo "</a>";?></li>
+                  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>Math</span>
                       </a>
                       <ul class="sub">
-                          <li><?php echo"<a href='detail.php?p=F01' >";?>1ere <?php echo "</a>";?></li>
-                          <li><?php echo"<a href='detail.php?p=' >";?>2eme<?php echo "</a>";?></li>
+                          <li><?php echo"<a href='detail.php?A=L2' >";?>2eme<?php echo "</a>";?></li>
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
                           <li><a  href="">2eme master</a></li>
@@ -216,7 +219,6 @@ require_once('connexion_bd.php');
                           <span>Informatique</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="">1ere</a></li>
                           <li><a  href="">2eme</a></li>
                           <li><a  href="">3eme</a></li>
                           <li><a  href="">1ere master</a></li>
